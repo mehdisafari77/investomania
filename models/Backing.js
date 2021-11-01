@@ -12,7 +12,7 @@ Backing.init(
       autoIncrement: true,
     },
     backing: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     project_id: {
@@ -20,14 +20,6 @@ Backing.init(
         allowNull: false,
         references: {
             model: 'project',
-            key: 'id'
-        }
-    },
-    user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'user',
             key: 'id'
         }
     },
