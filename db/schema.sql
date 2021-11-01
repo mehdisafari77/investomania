@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS project_db;
-CREATE DATABASE project_db;
+DROP DATABASE IF EXISTS investomania_db;
+CREATE DATABASE investomania_db;
 
-USE project_db;
+USE investomania_db;
