@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -22,13 +22,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/projects/:id', async (req, res) => {
   try {
-    const projectData = await project.findByPk(req.params.id, {
+    const projectData = await Project.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -44,7 +44,7 @@ router.get('/project/:id', async (req, res) => {
   }
 });
 
-router.get('/project', withAuth, async (req, res) => {
+router.get('/projects', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },

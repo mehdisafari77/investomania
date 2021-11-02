@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investomania</title>
-    <link rel="app icon" type="image/png" href="../../public/assets/images/logo.PNG"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="../../public/assets/style/style.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Investomania</title>
+        <link rel="app icon" type="image/png" href="../../public/assets/images/logo.PNG"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="../../public/assets/style/style.css">
+    </head>
 
-<body class="flex-column min-100-vh">
-    <nav class="navbar">
+    <body class="flex-column min-100-vh">
+        <div class="flex-column justify-space-around">
+            <header class="display-flex justify-space-between align-center p-2">
+                <nav class="navbar">
+                    <h1>
+                        <img src="../../public/assets/images/logo.PNG" width="30" height="30" alt="">
+                    </h1>
+                    {{#if logged_in}}
+                        <a href="/interest">Interests</a> |
+                        <a href="/dashboard">Dashboard</a> |
+                        <button class="no-button" id="logout">logout</button>
+                    {{else}}
+                        <a href="/">Investomania</a>
+                        <a href="/login">login</a>
+                    {{/if}}
+                </nav>
+            </header>
+
+            <main class="container container-fluid mt-5">
+                {{{ body }}}
+            </main>
         
-        <ul>
-            <li class="li-inline nav-item">
-                <a class="navbar-brand" href="/">
-                <img src="../../public/assets/images/logo.PNG" width="30" height="30" alt="">
-                </a>
-            </li>
-            <li class="li-inline nav-item"><a href="/interests">My Interests</a></li>
-            <li class="li-inline nav-item"><a href="/login">Login</a></li>
-            <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <h1 class="app-title"><a href="/">Investomania</a></h1>
-    </header>
+            <footer class="flex-row justify-center">
+                &copy; Created by Sami, Umera and Mehdi
+            </footer>
+        </div>
 
-    <main class="col-auto">
-        {{{body}}}
-    </main>
-
-    <footer class="flex-row justify-center">
-        &copy; Created by Sami, Umera and Mehdi
-    </footer>
+        {{#if logged_in}}
+        <script src="/js/logout.js"></script>
+        {{/if}}
     </body>
 
 </html>
-<script src="/javascript/logout.js"></script>
