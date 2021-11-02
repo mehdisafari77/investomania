@@ -23,11 +23,9 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // timeLeft: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    //   Due Date,
-    //   defaultValue: DataTypes.NOW,
+    // timeLeft:{
+    //   type:DataTypes.DATE,
+    //   allowNull: false
     // },
     date_created: {
       type: DataTypes.DATE,
@@ -58,5 +56,8 @@ Project.init(
     modelName: 'project',
   }
 );
+
+module.exports = Project;
+
 
 module.exports = Project;
