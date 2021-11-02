@@ -31,7 +31,7 @@ Project.init(
     // },
     contributor: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       attributes: {
         Name: DataTypes.TEXT,
         Role: DataTypes.STRING,
