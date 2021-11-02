@@ -23,10 +23,10 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    timeLeft:{
-      type:DataTypes.DATE,
-      allowNull: false
-    },
+    // timeLeft:{
+    //   type:DataTypes.DATE,
+    //   allowNull: false
+    // },
     contributor: {
       type: DataTypes.STRING,
       allowNull: true,

@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Project } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
+// post a project with attributes
+// WORKS!!! but without timeLeft
 router.post('/', async (req, res) => {
   try {
     const newProject = await Project.create({
