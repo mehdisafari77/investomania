@@ -1,16 +1,16 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection')
 const withAuth = require('../utils/auth');
-const { User, Post, Comment } = require('../models');
+const { User, Project, Backing } = require('../models');
 
 router.get('/', withAuth, async (req, res) => {
     try {
-        const postData = await Post.findAll({
+        const projectData = await Project.findAll({
             where: {user_id: req.session.user_id}
         });
-        const posts = postData.map((post) => post.get({ plain: true }));
+        const projects = projectData.map((project) => project.get({ plain: true }));
         res.render('dashboard', { 
-        posts, 
+        projects, 
         logged_in: req.session.logged_in 
         });
     } catch (err) {

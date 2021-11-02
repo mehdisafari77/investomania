@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="../../public/assets/style/reset.css">
         <link rel="stylesheet" href="../../public/assets/style/style.css">
     </head>
 
@@ -16,10 +17,10 @@
         <div class="flex-column justify-space-around">
             <header class="display-flex justify-space-between align-center p-2">
                 <nav class="navbar">
-                    <h1>
-                        <img src="../../public/assets/images/logo.PNG" width="30" height="30" alt="">
-                    </h1>
                     {{#if logged_in}}
+                        <h1>
+                            <img src="../../public/assets/images/clearLogo.PNG" width="30" height="30" alt="">
+                        </h1>
                         <a href="/interest">Interests</a> |
                         <a href="/dashboard">Dashboard</a> |
                         <button class="no-button" id="logout">logout</button>
@@ -34,8 +35,8 @@
                 {{{ body }}}
             </main>
         
-            <footer class="flex-row justify-center">
-                &copy; Created by Sami, Umera and Mehdi
+            <footer>
+                <p>&copy; Created by Sami, Umera and Mehdi</p>
             </footer>
         </div>
 

@@ -52,7 +52,7 @@ router.get('/projects', withAuth, async (req, res) => {
       include: [Project],
     });
     const user = userData.get({ plain: true });
-    res.render('profile', {
+    res.render('dashboard', {
       ...user,
       logged_in: true
     });
@@ -63,7 +63,7 @@ router.get('/projects', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/dashboard');
     return;
   }
   res.render('login');
