@@ -16,12 +16,24 @@ Project.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    timeLeft:{
+      type:DataTypes.DATE,
+      allowNull: false
+    },
+    contributor: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      attributes: {
+        Name: DataTypes.TEXT,
+        Role: DataTypes.STRING,
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -39,5 +51,8 @@ Project.init(
     modelName: 'project',
   }
 );
+
+module.exports = Project;
+
 
 module.exports = Project;

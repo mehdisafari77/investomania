@@ -29,10 +29,7 @@ User.init({
             len: [5]
         }
     },
-    own_project: {
-        type: DataTypes.STRING,
-        allowNull: true
-    }
+
 },
 
 {
