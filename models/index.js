@@ -2,23 +2,32 @@ const Backing = require('./Backing')
 const Project = require('./Project')
 const User = require('./User')
 
+User.hasMany(Project, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+User.hasMany(Backing, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
 Project.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
-})
+});
 
-Project.hasMany(User, {
-    foreignKey: 'post_id',
+Project.hasMany(Backing, {
+    foreignKey: 'project_id',
     onDelete: 'CASCADE'
-})
+});
 
 Backing.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-})
+    foreignKey: 'user_id'
+});
 
-module.exports = {
-    Project,
-    User,
-    Backing
-}
+Backing.belongsTo(Project, {
+    foreignKey: 'project_id'
+});
+
+module.exports = { Project, User, Backing };

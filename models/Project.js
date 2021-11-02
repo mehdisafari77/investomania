@@ -17,11 +17,25 @@ Project.init(
     },
     description: {
       type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // date_created: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false,
+    //   Due Date,
+    //   defaultValue: DataTypes.NOW,
+    // },
+    contributors: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      attributes: {
+        Name: DataTypes.TEXT,
+        Role: DataTypes.STRING,
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
