@@ -29,10 +29,7 @@ User.init({
             len: [5]
         }
     },
-    // interest: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true
-    // }
+
 },
 
 {

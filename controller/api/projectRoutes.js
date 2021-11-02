@@ -1,13 +1,14 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
-router.post('/projects', withAuth, async (req, res) => {
+// post a project with attributes
+// WORKS!!! but without timeLeft
+router.post('/', async (req, res) => {
   try {
     const newProject = await Project.create({
-      ...req.body,
       title: req.body.title,
-      user_id: req.session.user_id,
+      user_id: req.body.user_id,
       description: req.body.description,
       contributor: req.body.contributor,
       image: req.body.image,
@@ -21,7 +22,7 @@ router.post('/projects', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id',  async (req, res) => {
   try {
     const projectData = await Project.destroy({
       where: {
