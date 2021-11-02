@@ -23,13 +23,13 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // date_created: {
+    // timeLeft: {
     //   type: DataTypes.DATE,
     //   allowNull: false,
     //   Due Date,
     //   defaultValue: DataTypes.NOW,
     // },
-    contributors: {
+    contributor: {
       type: DataTypes.STRING,
       allowNull: false,
       attributes: {
