@@ -1,5 +1,5 @@
 {
-  "name": "project_two",
+  "name": "investomania",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samikhawja/project_two.git"
+    "url": "git+https://github.com/samikhawja/investomania.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samikhawja/project_two/issues"
+    "url": "https://github.com/samikhawja/investomania/issues"
   },
-  "homepage": "https://github.com/samikhawja/project_two#readme",
+  "homepage": "https://github.com/samikhawja/investomania#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
