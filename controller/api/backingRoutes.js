@@ -2,7 +2,16 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const sequelize = require('../../config/connection');
 const { Backing } = require('../../models');
-  
+ 
+router.get('/', async (req, res) => {
+  try{
+    const newBacking = await Backing.findAll()
+    res.json(newBacking);
+  } catch(err){
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const backingData = await Backing.create(req.body);

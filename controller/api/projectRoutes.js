@@ -2,7 +2,16 @@ const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/projects', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
+  try{
+    const newProject = await Project.findAll()
+    res.json(newProject);
+  } catch(err){
+    res.status(500).json(err);
+  }
+});
+
+router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({
       ...req.body,
@@ -14,7 +23,6 @@ router.post('/projects', withAuth, async (req, res) => {
       // timeLeft: req.body.timeLeft
     });
     res.status(200).json(newProject);
-    console.log(newProject)
   } catch (err) {
     console.log(err)
     res.status(400).json(err);

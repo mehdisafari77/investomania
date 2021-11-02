@@ -13,8 +13,7 @@ User.hasMany(Backing, {
 });
 
 Project.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    foreignKey: 'user_id'
 });
 
 Project.hasMany(Backing, {
