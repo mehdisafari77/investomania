@@ -27,6 +27,11 @@ Project.init(
     //   type:DataTypes.DATE,
     //   allowNull: false
     // },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     contributor: {
       type: DataTypes.STRING,
       allowNull: true,
