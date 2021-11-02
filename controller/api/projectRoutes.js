@@ -1,20 +1,26 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
-router.project('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newProject = await Project.create({
-      ...req.body,
-      user_id: req.session.user_id,
+      title: req.body.title,
+      user_id: req.body.user_id,
+      description: req.body.description,
+      contributor: req.body.contributor,
+      image: req.body.image,
+      // timeLeft: req.body.timeLeft
     });
     res.status(200).json(newProject);
+    console.log(newProject)
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id',  async (req, res) => {
   try {
     const projectData = await Project.destroy({
       where: {
