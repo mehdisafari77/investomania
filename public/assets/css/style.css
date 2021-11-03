@@ -9,11 +9,11 @@ footer {
 }
 
 :root {
-  --primary: #f0f3f1;
-  --secondary: #99eb57;
-  --tertiary: #7ea878;
+  --primary: #dde6e0;
+  --secondary: #050505;
+  --tertiary: #97db8c;
   --light-dark: #c0bb73;
-  --dark: #696742;
+  --dark: #cfcda7;
   --border-radius: 0.3rem;
 }
 
