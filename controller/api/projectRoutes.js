@@ -15,12 +15,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({
       ...req.body,
-      title: req.body.title,
       user_id: req.session.user_id,
-      description: req.body.description,
-      contributor: req.body.contributor,
-      image: req.body.image,
-      // timeLeft: req.body.timeLeft
     });
     res.status(200).json(newProject);
   } catch (err) {
