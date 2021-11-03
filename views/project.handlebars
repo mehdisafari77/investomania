@@ -1,6 +1,13 @@
-<div class="text-center">
-  <h2>{{title}}</h2>
-  <p>Created by {{user.username}} on {{format_date date_created}}</p>
-  <textarea>{{description}}</textarea>
-  <img src="{{image}}" alt="logo of project">
-</div>
+<div class="card mb-3" style="display: flex; flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;">
+  <div class="card-body">Project Name: <h2>{{title}}</h2>
+  <img src="{{image}}" style="height: 300px; width: 500px;" alt="logo of project">
+  
+  <p class="card-text" style="
+    margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description: {{description}}</small></p>
+    <p>Created by {{user.username}} on {{format_date date_created}}</p>
+  <button type="button" class="btn btn-primary btn-lg"><a href="/projects/{{project.id}}">Express Interest</a></button>
+  </div>
+  </div>
