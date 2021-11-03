@@ -1,0 +1,27 @@
+{{#each projects as |project| }}
+<a href="/projects/{{project.id}}">
+    <div class="card interestCard">
+        <div class="card-header">
+            {{project.title}}
+        </div>
+        <div class="card-body">
+            <p class="card-text interestText">{{project.description}}</p>
+            <img src="{{project.image}}" class="interestImage" alt="project logo">
+        </div>
+    </div>
+</a>
+{{/each}}
+
+{{!-- {{#each projects as |project| }}
+<div class="card mb-3">
+  <img src="{{project.image}}" class="" alt="project logo">
+  <div class="card-body">
+   <h2>Project name: <a href="/projects/{{project.id}}">{{project.title}}</a></h2>
+    <p>Created by {{user.username}} on {{format_date project.date_created}}</p>
+    <p class="card-text" style="
+    margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description:<p>
+      {{project.description}}
+    </p></small></p>
+  </div>
+</div>
+{{/each}} --}}

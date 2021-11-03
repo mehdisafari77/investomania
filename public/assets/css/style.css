@@ -13,6 +13,21 @@ footer {
   width: auto;
 }
 
+.interestCard {
+  height: 200px;
+}
+
+.interestText{
+  width: 75%;
+}
+
+.interestImage {
+  height: 100px;
+  position: relative;
+  top: -90px;
+  float: right;
+}
+
 :root {
   --primary: #f0f3f1;
   --secondary: #99eb57;
