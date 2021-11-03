@@ -9,20 +9,23 @@
     <h3>Create a New Project:</h3>
 
     <form class="form new-post-form">
-      <div class="form-group">
-        <label for="projectName">Project Name:</label>
-        <input class="form-input" type="text" id="project-title" name="project-title" />
+      <div class="form-group pt-1" style="
+    padding-bottom: 10px;">
+        <label for="project-name">Project Name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      <div class="form-group" style="
+    padding-bottom: 10px;">
+        <label for="project-desc">Description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div class="form-group"style="
+    padding-bottom: 10px;">
+        <label for="project-img">Add Image Link:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
       </div>
       <div class="form-group">
-        <label for="projectDesc">Description:</label>
-        <textarea class="project-desc" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="projectImg">Add Image Link:</label>
-        <textarea class="project-img" id="project-img" name="project-img"></textarea>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" id="save-project" onClick="window.location.reload();" type="submit">Create</button>
+        <button class="btn btn-primary" type="submit">Create</button>
       </div>
     </form>
   </div>
@@ -37,7 +40,7 @@
         <h4><a href="/projects/{{project.id}}">{{project.title}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" id="delete-project" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
@@ -45,4 +48,4 @@
   {{/if}}
 </div>
 
-<script src="/js/dashboard.js"></script>
+<script src="./js/dashboard.js"></script>
