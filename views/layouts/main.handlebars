@@ -18,13 +18,13 @@
     <body class="flex-column min-100-vh">
         <div class="flex-column justify-space-around">
             <header class="display-flex justify-space-between align-center p-2">
-                <nav class="navbar sticky-top navbar-light bg-light">
+                <nav class="navbar sticky-top navbar-light">
                     {{#if logged_in}}
                         <h1>
                             <a href="/">
-                                <img src="/assets/images/clearLogo.PNG" href = "/" width="30" height="30" alt="logo">
+                                <img src="/assets/images/clearLogo.PNG" href = "/" width="30" height="30" alt="logo" id="logo">
                             </a>
-                        </h1>
+                        </h1> |
                         <a href="/interest">Interests</a> |
                         <a href="/dashboard">Dashboard</a> |
                         <button class="no-button" id="logout">logout</button>
