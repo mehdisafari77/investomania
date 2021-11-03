@@ -1,6 +1,6 @@
 {{#each projects as |project| }}
 <div class="card mb-3">
-  <img src="https://images.pexels.com/photos/3586249/pexels-photo-3586249.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
+  <img src="{{project.image}}" class="card-img-top" alt="project logo">
   <div class="card-body">
    <h2>Project name: <a href="/projects/{{project.id}}">{{project.title}}</a></h2>
     <p>Created by {{user.username}} on {{format_date project.date_created}}</p>

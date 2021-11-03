@@ -18,21 +18,27 @@
     <body class="flex-column min-100-vh">
         <div class="flex-column justify-space-around">
             <header class="display-flex justify-space-between align-center p-2">
-                <nav class="navbar sticky-top navbar-light bg-light">
-                    {{#if logged_in}}
+                {{#if logged_in}}
+                    <nav class="navbar sticky-top navbar-light"></nav>
                         <h1>
                             <a href="/">
-                                <img src="/assets/images/clearLogo.PNG" href = "/" width="30" height="30" alt="logo">
+                                <img src="/assets/images/clearLogo.PNG" href = "/" width="30" height="30" alt="logo" id="logo">
                             </a>
-                        </h1>
+                        </h1> |
                         <a href="/interest">Interests</a> |
                         <a href="/dashboard">Dashboard</a> |
                         <a class="btn btn-primary" "no-button" id="logout" role="button">Logout</a>
                     {{else}}
                         <a href="/">Investomania</a>
+                        <button class="no-button" id="logout">logout</button>
+                    </nav>
+                {{else}}
+                    <nav class="navbar sticky-top navbar-light"></nav>
+                        <a href="/">Investomania</a> |
+
                         <a href="/login">login</a>
-                    {{/if}}
-                </nav>
+                    </nav>
+                {{/if}}
             </header>
 
             <main class="container container-fluid mt-5">

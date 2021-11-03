@@ -8,6 +8,11 @@ footer {
   text-align: center;
 }
 
+#logo {
+  height: 75px;
+  width: auto;
+}
+
 :root {
   --primary: #f0f3f1;
   --secondary: #99eb57;
@@ -112,19 +117,14 @@ input {
 }
 
 .navbar {
-  width: 100%;
+  width: 97.5%;
   position: fixed;
-  background-color: var(--dark);
+  margin-top: -15px;
 }
 
 .nav-item {
   margin: 0 40px;
 }
-
-.nav-item a {
-  color: var(--primary);
-}
-
 .hero {
   padding: 3% 4%;
   background-color: var(--dark);
