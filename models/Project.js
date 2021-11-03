@@ -24,17 +24,17 @@ Project.init(
       allowNull: false,
     },
   
-    date_picker: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      validate:{
-        isDate: {
-          args: true,
-          msg: "Must be a valid date"
-        }
-      }
+    // date_picker: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false,
+    //   validate:{
+    //     isDate: {
+    //       args: true,
+    //       msg: "Must be a valid date"
+    //     }
+    //   }
       
-    },
+    // },
     contributor: {
       type: DataTypes.STRING,
       allowNull: true,
