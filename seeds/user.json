@@ -1,16 +1,18 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "email": "skhawja@gmail.com",
     "username": "samikhawja",
     "password": "password1"
   },
   {
+    "id": 2,
     "email": "msafari@gmail.com",
     "username": "mehdisafari",
     "password": "password2"
   },
   {
+    "id": 3,
     "email": "umalek@gmail.com",
     "username": "umeramalek",
     "password": "password3"
