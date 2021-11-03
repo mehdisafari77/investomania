@@ -2,11 +2,10 @@
 <div class="card mb-3">
   <img src="https://images.pexels.com/photos/3586249/pexels-photo-3586249.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
   <div class="card-body">
-   <h2>
-      <a href="/projects/{{project.id}}">{{project.title}}</a>
-    </h2>
+   <h2>Project name: <a href="/projects/{{project.id}}">{{project.title}}</a></h2>
     <p>Created by {{user.username}} on {{format_date project.date_created}}</p>
-    <p class="card-text"><small class="text-muted">Description:<p>
+    <p class="card-text" style="
+    margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description:<p>
       {{project.description}}
     </p></small></p>
   </div>
