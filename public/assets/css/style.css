@@ -13,6 +13,13 @@ footer {
   width: auto;
 }
 
+#homepageImage {
+  height: 75px;
+  width: 75px;
+  position: relative;
+  justify-content: center;
+}
+
 .interestCard {
   height: 200px;
 }
