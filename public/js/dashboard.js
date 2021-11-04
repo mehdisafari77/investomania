@@ -69,7 +69,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const projectID = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${projectID}`, {
+    const response = await fetch(`/api/projects/${projectID.location.href[projectID.location.href.length-1]}`, {
       method: 'DELETE',
     });
 

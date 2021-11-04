@@ -21,7 +21,8 @@ footer {
 }
 
 .interestCard {
-  height: 200px;
+  height: 300px;
+  word-wrap: break-word;
 }
 
 .interestText{
