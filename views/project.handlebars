@@ -3,11 +3,54 @@
     justify-content: center;
     align-items: center;">
   <div class="card-body">Project Name: <h2>{{title}}</h2>
-  <img src="{{image}}" style="height: 300px; width: 500px;" alt="logo of project">
-  
-  <p class="card-text" style="
-    margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description: {{description}}</small></p>
-    <p>Created by {{user.username}} on {{format_date date_picker}}</p>
-  <button type="button" class="btn btn-primary btn-lg"><a href="/projects/{{project.id}}">Express Interest</a></button>
+    <img src="{{image}}" style="height: 300px; width: 500px;" alt="logo of project">
+    
+    <p class="card-text" style="
+      margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description: {{description}}</small></p>
+      <p>Created by {{user.username}} on {{format_date date_picker}}</p>
+    <button type="button" class="btn btn-primary btn-lg">Express Interest</button>
   </div>
-  </div>
+</div>
+<div>
+  <h2>Contributors:</h2>
+  <p>{{contributor}}</p>
+</div>
+<hr>
+<div>
+
+<!-- Modal -->
+
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Choose Amount:</label>
+                    <select
+                      class="form-control prType"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option>$1</option>
+                      <option>$5</option>
+                      <option>$10</option>
+                      <option>$25</option>
+                      <option>$50</option>
+                      <option>$100</option>
+                      <option>$250</option>
+                      <option>$500</option>
+                    </select>
+                  </div>
+                  <br/>
+                <h2>Tap to Submit</h2>
+                <button type="button" class="btn" onclick="myFunction()">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+  <script>
+  function myFunction() {
+    alert("The project user appreciates your generousity and thanks you!");
+  }
+  </script>
+</div>

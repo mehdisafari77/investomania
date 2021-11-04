@@ -2,12 +2,17 @@ let projectTitle;
 let projectDesc;
 let projectImg;
 let saveBtn;
+let projectCont;
+let projectDate;
 
 if(window.location.pathname === '/dashboard') {
   projectTitle = document.querySelector('#project-title');
   projectDesc = document.querySelector('#project-desc');
   projectImg = document.querySelector('#project-img');
   saveBtn = document.querySelector('#save-project');
+  projectCont = document.querySelector('#project-cont');
+  projectDate = document.querySelector('#project-datepicker')
+
 }
 
 const saveProject = (event) => {
@@ -16,6 +21,8 @@ const saveProject = (event) => {
     title: projectTitle.value.trim(),
     description: projectDesc.value.trim(),
     image: projectImg.value.trim(),
+    contributor: projectCont.value.trim(),
+    date_picker: projectDate.value.trim(),
   }
   fetch('/api/projects', {
     method: 'POST',
@@ -81,7 +88,7 @@ const delButtonHandler = async (event) => {
   }
 };
 
-var field = document.getElementById('datepicker');
+var field = document.getElementById('project-datepicker');
 var picker = new Pikaday({
     onSelect: function(date) {
         field.value = picker.toString();
