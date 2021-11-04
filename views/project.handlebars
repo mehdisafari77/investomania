@@ -4,10 +4,11 @@
     align-items: center;">
   <div class="card-body">Project Name: <h2>{{title}}</h2>
     <img src="{{image}}" style="height: 300px; width: 500px;" alt="logo of project">
-    
+    <h2>Ends: {{format_date date_picker}}</h2>
+    <h2>Backed By: {{backing}} backers</h2>
     <p class="card-text" style="
       margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description: {{description}}</small></p>
-      <p>Created by {{user.username}} on {{format_date date_picker}}</p>
+      <p>Created by {{user.username}}</p>
     <button type="button" class="btn btn-primary btn-lg" onclick="backing()">Express Interest</button>
   </div>
 </div>
