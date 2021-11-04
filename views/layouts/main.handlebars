@@ -1,54 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang=“en”>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset=“utf-8">
+        <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
         <title>Investomania</title>
-        <link rel="app icon" type="image/png" href="../../public/assets/images/logo.PNG"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,400;1,600&display=swap" rel="stylesheet">  
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-
-        <link rel="stylesheet" href="/css/reset.css">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel=“app icon” type=“image/png” href=“../../public/assets/images/logo.PNG”/>
+        <link rel=“preconnect” href=“https://fonts.googleapis.com”>
+        <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+        <link href=“https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,400;1,600&display=swap” rel=“stylesheet”>
+        <link href=“https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css” rel=“stylesheet” integrity=“sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin=“anonymous”>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">    
+        <link rel=“stylesheet” href=“/assets/css/reset.css”>
+        <link rel=“stylesheet” href=“/assets/css/style.css”>
     </head>
-
-    <body class="flex-column min-100-vh">
-        <div class="flex-column justify-space-around">
-            <header class="display-flex justify-space-between align-center p-2">
-                <nav class="navbar sticky-top navbar-light bg-light">
+    <body class=“flex-column min-100-vh”>
+        <div class=“flex-column justify-space-around”>
+            <header class=“display-flex justify-space-between align-center p-2">
+                <nav class=“navbar sticky-top navbar-light bg-light”>
                     {{#if logged_in}}
                         <h1>
-                            <a href="/">
-                                <img src="/assets/images/clearLogo.PNG"  width="30" height="30" alt="logo">
+                            <a href=“/”>
+                                <img src=“/assets/images/clearLogo.PNG” href = “/” width=“50” height=“50" alt=“logo”>
                             </a>
                         </h1>
-                        <a href="/interest">Interests</a> |
-                        <a href="/dashboard">Dashboard</a> |
-                        <button class="no-button" id="logout">logout</button>
+                        <a href=“/interest”>Interests</a> |
+                        <a href=“/dashboard”>Dashboard</a> |
+                        <a class=“btn btn-primary” “no-button” id=“logout” role=“button”>Logout</a>
                     {{else}}
-                        <a href="/">Investomania</a>
-                        <a href="/login">login</a>
+                        <a href=“/”>Investomania</a>
+                        <a href=“/login”>login</a>
                     {{/if}}
                 </nav>
             </header>
-
-            <main class="container container-fluid mt-5">
+            <main class=“container container-fluid mt-5">
                 {{{ body }}}
             </main>
-        
             <footer>
                 <p>&copy; Created by Sami, Umera and Mehdi</p>
             </footer>
         </div>
-
         {{#if logged_in}}
-        <script src="/js/logout.js"></script>
+        <script src=“/js/logout.js”></script>
         {{/if}}
     </body>
-
 </html>

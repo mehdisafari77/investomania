@@ -2,22 +2,22 @@
     {
         "title": "Apple",
         "description": "Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services. Apple is the world's largest technology company by revenue and, since January 2021, the world's most valuable company.",
-        "image": "https://www.apple.com/v/apple-events/home/t/images/meta/september2021__f5zmksnt6cuq_og.jpg?202110120754",
-        "date_picker":"2016-07-25T00:00:00",
+        "image": "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202104211633",
+        "date_picker": "Apr. 1, 1976",
         "user_id": "1"
     },
     {
         "title": "Google",
         "description": "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
         "image": "https://bsmedia.business-standard.com/_media/bs/img/about-page/1562577931.jpg",
-        "date_picker":" 2016-07-25T00:00:00",
+        "date_picker":" Apr. 1, 1976",
         "user_id": "2"
     },
     {
         "title": "Meta",
         "description": "Facebook is an American online social media and social networking service owned by Meta Platforms. Founded in 2004 by Mark Zuckerberg with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, its name comes from the face book directories often given to American university students.",
-        "image": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-        "date_picker":" 2016-07-25T00:00:00",
+        "image": "https://1000logos.net/wp-content/uploads/2021/10/logo-Meta.png",
+        "date_picker": "Feb. 17, 2004",
         "user_id": "3"
     }
 ]

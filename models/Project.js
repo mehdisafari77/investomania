@@ -33,7 +33,6 @@ Project.init(
           msg: "Must be a valid date"
         }
       }
-      
     },
     contributor: {
       type: DataTypes.STRING,
