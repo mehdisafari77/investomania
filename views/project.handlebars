@@ -17,15 +17,37 @@
 </div>
 <hr>
 <div>
-  <h2>Feeling Generous?</h2>
-  <button type="button" class="btn" onclick="myFunction()">$1</button>
-  <button type="button" class="btn" onclick="myFunction()">$5</button>
-  <button type="button" class="btn" onclick="myFunction()">$10</button>
-  <button type="button" class="btn" onclick="myFunction()">$25</button>
-  <button type="button" class="btn" onclick="myFunction()">$50</button>
-  <button type="button" class="btn" onclick="myFunction()">$100</button>
-  <button type="button" class="btn" onclick="myFunction()">$250</button>
-  <button type="button" class="btn" onclick="myFunction()">$500</button>
+
+<!-- Modal -->
+
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Choose Amount:</label>
+                    <select
+                      class="form-control prType"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option>$1</option>
+                      <option>$5</option>
+                      <option>$10</option>
+                      <option>$25</option>
+                      <option>$50</option>
+                      <option>$100</option>
+                      <option>$250</option>
+                      <option>$500</option>
+                    </select>
+                  </div>
+                  <br/>
+                <h2>Tap to Submit</h2>
+                <button type="button" class="btn" onclick="myFunction()">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
   <script>
   function myFunction() {
     alert("The project user appreciates your generousity and thanks you!");
