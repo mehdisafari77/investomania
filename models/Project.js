@@ -23,14 +23,16 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // timeLeft:{
-    //   type:DataTypes.DATE,
-    //   allowNull: false
-    // },
-    date_created: {
+  
+    date_picker: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      validate:{
+        isDate: {
+          args: true,
+          msg: "Must be a valid date"
+        }
+      }
     },
     contributor: {
       type: DataTypes.STRING,
