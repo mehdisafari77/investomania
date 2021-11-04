@@ -85,11 +85,12 @@ var field = document.getElementById('datepicker');
 var picker = new Pikaday({
     onSelect: function(date) {
         field.value = picker.toString();
-        console.log(date);
-        // return date.toLocaleDateString();
+        console.log(date.toLocaleDateString());
+        
     }
 });
 field.parentNode.insertBefore(picker.el, field.nextSibling);
+
 
 
 document
