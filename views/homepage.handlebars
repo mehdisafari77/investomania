@@ -1,14 +1,31 @@
-{{#each projects as |project| }}
-<div class="card mb-3">
-  <img id="homepageImage" src="{{project.image}}" class="card-img-top" alt="project logo">
-  <div class="card-body">
-   <h2>Project name: <a href="/projects/{{project.id}}">{{project.title}}</a></h2>
-    <p>Created by {{user.username}} on {{format_date project.date_created}}</p>
-    <p class="card-text" style="
-    margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description:<p>
-      {{project.description}}
-    </p></small></p>
-    <button type="button" class="btn btn-primary btn-lg"><a href="/projects/{{project.id}}">Express Interest</a></button>
-  </div>
-</div>
-{{/each}}
+{{#if logged_in}}
+  {{#each projects as |project| }}
+    <div class="card mb-3">
+      <img id="homepageImage" src="{{project.image}}" class="card-img-top" alt="project logo">
+      <div class="card-body">
+      <h2>Project name: <a href="/projects/{{project.id}}">{{project.title}}</a></h2>
+        <p>Created by {{user.username}} on {{format_date project.date_created}}</p>
+        <p class="card-text" style="
+        margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description:<p>
+          {{project.description}}
+        </p></small></p>
+        <button type="button" class="btn btn-primary btn-lg"><a href="/projects/{{project.id}}">Learn More</a></button>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  {{#each projects as |project| }}
+    <div class="card mb-3">
+      <img id="homepageImage" src="{{project.image}}" class="card-img-top" alt="project logo">
+      <div class="card-body">
+      <h2>Project name: <a href="/projects/{{project.id}}">{{project.title}}</a></h2>
+        <p>Created by {{user.username}} on {{format_date project.date_created}}</p>
+        <p class="card-text" style="
+        margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description:<p>
+          {{project.description}}
+        </p></small></p>
+        <button type="button" class="btn btn-primary btn-lg"><a href="/login">Sign In First</a></button>
+      </div>
+    </div>
+  {{/each}}
+{{/if}}
