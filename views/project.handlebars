@@ -3,11 +3,32 @@
     justify-content: center;
     align-items: center;">
   <div class="card-body">Project Name: <h2>{{title}}</h2>
-  <img src="{{image}}" style="height: 300px; width: 500px;" alt="logo of project">
-  
-  <p class="card-text" style="
-    margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description: {{description}}</small></p>
-    <p>Created by {{user.username}} on {{format_date date_created}}</p>
-  <button type="button" class="btn btn-primary btn-lg"><a href="/projects/{{project.id}}">Express Interest</a></button>
+    <img src="{{image}}" style="height: 300px; width: 500px;" alt="logo of project">
+    
+    <p class="card-text" style="
+      margin-bottom: 5px; font-size: 22px"><small class="text-muted">Description: {{description}}</small></p>
+      <p>Created by {{user.username}} on {{format_date date_created}}</p>
+    <button type="button" class="btn btn-primary btn-lg">Express Interest</button>
   </div>
-  </div>
+</div>
+<div>
+  <h2>Contributors:</h2>
+  <p>{{contributor}}</p>
+</div>
+<hr>
+<div>
+  <h2>Feeling Generous?</h2>
+  <button type="button" class="btn" onclick="myFunction()">$1</button>
+  <button type="button" class="btn" onclick="myFunction()">$5</button>
+  <button type="button" class="btn" onclick="myFunction()">$10</button>
+  <button type="button" class="btn" onclick="myFunction()">$25</button>
+  <button type="button" class="btn" onclick="myFunction()">$50</button>
+  <button type="button" class="btn" onclick="myFunction()">$100</button>
+  <button type="button" class="btn" onclick="myFunction()">$250</button>
+  <button type="button" class="btn" onclick="myFunction()">$500</button>
+  <script>
+  function myFunction() {
+    alert("The project user appreciates your generousity and thanks you!");
+  }
+  </script>
+</div>
