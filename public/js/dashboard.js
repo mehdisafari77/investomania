@@ -4,6 +4,7 @@ let projectImg;
 let saveBtn;
 let projectCont;
 let projectDate;
+let projectBacking = 2;
 
 if(window.location.pathname === '/dashboard') {
   projectTitle = document.querySelector('#project-title');
@@ -12,6 +13,7 @@ if(window.location.pathname === '/dashboard') {
   saveBtn = document.querySelector('#save-project');
   projectCont = document.querySelector('#project-cont');
   projectDate = document.querySelector('#project-datepicker')
+
 
 }
 
@@ -23,6 +25,7 @@ const saveProject = (event) => {
     image: projectImg.value.trim(),
     contributor: projectCont.value.trim(),
     date_picker: projectDate.value.trim(),
+    backing: projectBacking
   }
   fetch('/api/projects', {
     method: 'POST',
@@ -75,6 +78,7 @@ if(window.location.pathname === '/dashboard')
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const projectID = event.target.getAttribute('data-id');
+    console.log(projectID)
 
     const response = await fetch(`/api/projects/${projectID}`, {
       method: 'DELETE',
@@ -99,7 +103,5 @@ var picker = new Pikaday({
 field.parentNode.insertBefore(picker.el, field.nextSibling);
 
 
-
-document
-  .querySelector('.delete-project')
-  .addEventListener('click', delButtonHandler);
+const deleteButton = document.querySelector('.delete-project');
+deleteButton.addEventListener('click', delButtonHandler);
