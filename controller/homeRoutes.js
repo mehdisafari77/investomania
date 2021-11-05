@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User, } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -67,5 +67,33 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
+
+router.put('/projects/:id', withAuth, async (req, res) => {
+  console.log("hello world")
+  try {
+    const clicks = await Project.findByPk(req.params.id)
+    console.log(clicks)
+    const counter = clicks._previousDataValues.backing
+    const backing = await clicks.increment(
+
+    {
+      backing: +1
+     
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    });
+    console.log(backing.backing)
+    res.status(200).json(backing);
+    
+  } catch (err) {
+      res.status(500).json(err);
+    };
+});
+
+
+
 
 module.exports = router;
