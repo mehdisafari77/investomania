@@ -1,5 +1,13 @@
 # investomania
 
+## Table of Content 
+<br/>
+[What is Regex?](#what-is-regex) <br/>
+[Example](#example) <br/>
+[Authors](#authors) <br/>
+[Acknowledgments](#acknowledgments)
+<br/>
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
